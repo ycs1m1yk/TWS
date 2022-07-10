@@ -498,4 +498,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Js config 파일
+jsconfig.json
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,node,macos,windows,pycharm
