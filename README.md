@@ -16,11 +16,11 @@ Today We Solved
 |  08  | **Brute Force** | <a href="https://www.acmicpc.net/problem/2503" target="_blank">2503</a> | <a href="https://www.acmicpc.net/problem/2503" target="_blank">[숫자 야구](https://www.acmicpc.net/problem/2503)</a> | Silver3 | 2022/08/01 |
 |  09  | **Brute Force** | <a href="https://www.acmicpc.net/problem/14620" target="_blank">14620</a> | <a href="https://www.acmicpc.net/problem/14620" target="_blank">[꽃길](https://www.acmicpc.net/problem/14620)</a> | Silver2 | 2022/08/01 |
 |  10  | **Brute Force** | <a href="https://www.acmicpc.net/problem/15661" target="_blank">15661</a> | <a href="https://www.acmicpc.net/problem/15661" target="_blank">[링크와 스타트](https://www.acmicpc.net/problem/15661)</a> | Silver1 | 2022/08/01 |
-|  11  | **Brute Force** | <a href="https://www.acmicpc.net/problem/14500" target="_blank">14500</a> | <a href="https://www.acmicpc.net/problem/14500" target="_blank">[테트로미노](https://www.acmicpc.net/problem/14500)</a> |  Gold5  | 2022/08/01 |
-|  12  | **Brute Force** | <a href="https://www.acmicpc.net/problem/21278" target="_blank">21278</a> | <a href="https://www.acmicpc.net/problem/21278" target="_blank">[호석이 두 마리 치킨](https://www.acmicpc.net/problem/21278)</a> |  Gold5  | 2022/08/01 |
-|      |                 |                                                              |                                                              |         |            |
-|      |                 |                                                              |                                                              |         |            |
-|      |                 |                                                              |                                                              |         |            |
+|  11  | **Brute Force** | <a href="https://www.acmicpc.net/problem/21278" target="_blank">21278</a> | <a href="https://www.acmicpc.net/problem/21278" target="_blank">[호석이 두 마리 치킨](https://www.acmicpc.net/problem/21278)</a> |  Gold5  | 2022/08/01 |
+|  12  | **Brute Force** | <a href="https://www.acmicpc.net/problem/14500" target="_blank">14500</a> | <a href="https://www.acmicpc.net/problem/14500" target="_blank">[테트로미노](https://www.acmicpc.net/problem/14500)</a> |  Gold4  | 2022/08/02 |
+|  13  | **Brute Force** | <a href="https://www.acmicpc.net/problem/12919" target="_blank">12919</a> | <a href="https://www.acmicpc.net/problem/12919" target="_blank">[A와 B 2](https://www.acmicpc.net/problem/12919)</a> |  Gold5  | 2022/08/02 |
+|  14  | **Brute Force** | <a href="https://www.acmicpc.net/problem/14501" target="_blank">14501</a> | <a href="https://www.acmicpc.net/problem/14501" target="_blank">[퇴사](https://www.acmicpc.net/problem/14501)</a> | Silver3 | 2022/08/02 |
+|  15  | **Brute Force** | <a href="https://www.acmicpc.net/problem/1254" target="_blank">1254</a> | <a href="https://www.acmicpc.net/problem/1254" target="_blank">[팰린드롬 만들기](https://www.acmicpc.net/problem/1254)</a> | Silver2 | 2022/08/02 |
 |      |                 |                                                              |                                                              |         |            |
 |      |                 |                                                              |                                                              |         |            |
 
