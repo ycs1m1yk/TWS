@@ -46,12 +46,16 @@ const solve = (arr) => {
 
   const zeroLb = lowerBound(0, arr, -1, arr.length);
   if (zeroLb <= arr.length - 2) {
-    candidates["case1"].sumAbs = arr[zeroLb] + arr[zeroLb + 1];
-    candidates["case1"].str = arr[zeroLb] + " " + arr[zeroLb + 1];
+    const sumAbs = arr[zeroLb] + arr[zeroLb + 1];
+    const str = `${arr[zeroLb]}  ${arr[zeroLb + 1]}`;
+    if (sumAbs === 0) return str;
+    candidates["case1"] = { sumAbs, str };
   }
   if (zeroLb >= 2) {
-    candidates["case2"].sumAbs = -arr[zeroLb - 2] + -arr[zeroLb - 1];
-    candidates["case2"].str = arr[zeroLb - 2] + " " + arr[zeroLb - 1];
+    const sumAbs = -arr[zeroLb - 2] + -arr[zeroLb - 1];
+    const str = `${arr[zeroLb - 2]}  ${arr[zeroLb - 1]}`;
+    if (sumAbs === 0) return str;
+    candidates["case2"] = { sumAbs, str };
   }
 
   let minAbs = MAX;
@@ -63,9 +67,10 @@ const solve = (arr) => {
 
       if (sumAbs < minAbs) {
         candidates["case3"].sumAbs = sumAbs;
-        candidates["case3"].str = curr + " " + arr[lb + offset];
+        candidates["case3"].str = `${curr}  ${arr[lb + offset]}`;
         minAbs = sumAbs;
       }
+      if (sumAbs === 0) break;
     }
   }
 
