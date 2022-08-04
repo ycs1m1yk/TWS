@@ -12,43 +12,36 @@ const input = (() => {
 function main() {
   const N = +input();
   const map = [...Array(N)].map(() => input().split(" ").map(Number));
-  const visited = [...Array(N).fill(false)];
-
+  const picked = [];
   let ans = Infinity;
-  function dfs(toPick, picked = []) {
-    if (toPick === 0) {
-      let flag = true;
-      const totalCost = picked.reduce((acc, v, i, a) => {
-        if (flag) {
-          let cost;
-          if (i === 0) {
-            cost = map[a.at(-1)][a[i]];
-          } else {
-            cost = map[a[i - 1]][a[i]];
-          }
-          flag = cost !== 0;
-          acc += cost;
-          return acc;
+
+  // 비트마스크 순열
+  function permutation(cnt, r, flag) {
+    if (cnt === r && map[picked.at(-1)][picked[0]] !== 0) {
+      const totalCost = picked.reduce((acc, _, i, a) => {
+        if (i === 0) {
+          acc += map[a.at(-1)][a[i]];
+        } else {
+          acc += map[a[i - 1]][a[i]];
         }
+        return acc;
       }, 0);
-      if (flag) {
-        ans = Math.min(totalCost, ans);
-      }
+      ans = Math.min(totalCost, ans);
       return;
     }
 
     for (let i = 0; i < N; i++) {
-      if (!visited[i]) {
-        visited[i] = true;
-        picked.push(i);
-        dfs(toPick - 1, picked);
-        visited[i] = false;
-        picked.pop();
+      if ((flag & (1 << i)) === 0) {
+        if (cnt > 0 && map[picked[cnt - 1]][i] === 0) {
+          continue;
+        }
+        picked[cnt] = i;
+        permutation(cnt + 1, r, flag | (1 << i));
       }
     }
   }
 
-  dfs(N);
+  permutation(0, N, 0);
   console.log(ans);
 }
 
