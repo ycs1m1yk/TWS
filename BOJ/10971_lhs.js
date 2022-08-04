@@ -15,23 +15,22 @@ function main() {
   let ans = Infinity;
 
   // 비트마스크 순열
-  function permutation(start, now, total, flag) {
-    if (flag === (1 << N) - 1 && map[now][start]) {
-      ans = Math.min(total + map[now][start], ans);
+  function permutation(now, total, flag) {
+    if (flag === (1 << N) - 1 && map[now][0]) {
+      ans = Math.min(total + map[now][0], ans);
       return;
     }
 
-    for (let i = 0; i < N; i++) {
+    for (let i = 1; i < N; i++) {
       const cost = map[now][i];
       if ((flag & (1 << i)) === 0 && cost && total + cost < ans) {
-        permutation(start, i, total + cost, flag | (1 << i));
+        permutation(i, total + cost, flag | (1 << i));
       }
     }
   }
 
-  for (let s = 0; s < N; s++) {
-    permutation(s, s, 0, 1 << s);
-  }
+  // 시작점을 0으로 고정
+  permutation(0, 0, 1);
   console.log(ans);
 }
 
