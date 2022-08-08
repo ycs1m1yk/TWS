@@ -1,18 +1,18 @@
 function solution(record) {
   const answer = [];
-  const idMap = {};
+  const idMap = new Map(); // <id, name>
   record.forEach((el) => {
     const [action, id, name] = el.split(" ");
     switch (action) {
       case "Enter":
-        idMap[id] = name;
+        idMap.set(id, name);
         answer.push(`${id}님이 들어왔습니다.`);
         break;
       case "Leave":
         answer.push(`${id}님이 나갔습니다.`);
         break;
       case "Change":
-        idMap[id] = name;
+        idMap.set(id, name);
         break;
 
       default:
@@ -22,6 +22,6 @@ function solution(record) {
 
   return answer.map((message) => {
     const id = message.split("님")[0];
-    return message.replace(id, idMap[id]);
+    return message.replace(id, idMap.get(id));
   });
 }
